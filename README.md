@@ -23,5 +23,9 @@ bash < <(curl -s https://raw.github.com/teohm/app-templates/master/install.sh)
 ## Use
 
 ```
+# For new Rails app
 rails new {app_name} -m ~/.app-templates/rails-grunt/setup.rb
+
+# For existing Rails app
+rake rails:template LOCATION=~/.app-templates/rails-grunt/setup.rb
 ```
