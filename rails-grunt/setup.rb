@@ -9,15 +9,18 @@ append_file '.gitignore' do
   ).join("\n")
 end
 
-remove_file 'app/assets/javascripts'
-remove_file 'app/assets/stylesheets'
-remove_file 'public/404.html'
-remove_file 'public/422.html'
-remove_file 'public/500.html'
-remove_file 'public/favicon.ico'
-remove_file 'public/robots.txt'
-remove_file 'app/views/layouts/application.html.erb'
-
+%w(
+app/assets/javascripts
+app/assets/stylesheets
+public/404.html
+public/422.html
+public/500.html
+public/favicon.ico
+public/robots.txt
+app/views/layouts/application.html.erb
+).each do |file|
+  remove_file file
+end
 
 #TODO change bower.json to ERB
 %w(
