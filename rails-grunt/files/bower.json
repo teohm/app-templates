@@ -1,0 +1,17 @@
+{
+  "name": "rails-grunt-app",
+  "version": "0.0.0",
+  "description": "Testing on integrating grunt with rails",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.0.2"
+  }
+}
