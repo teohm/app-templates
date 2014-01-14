@@ -41,6 +41,13 @@ end
 
 inject_into_class 'config/application.rb', 'Application' do
   <<-END
+
+    # Disable stylesheet and javascript generators
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+    end
+
     # Disable asset pipeline since we are not going
     # to use it for our static assets compilation
     config.assets.enabled = false
